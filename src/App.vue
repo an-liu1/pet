@@ -1,12 +1,23 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+    <TopNav />
+    <div class="content">
+      <router-view />
     </div>
-    <router-view/>
+    <div id="footerCon">
+      <div class="cpy-right">
+        <p>© 2022 gf hfhgf hhfg. All rights reserved | fbgdf hfghfgjn gfncv.</p>
+      </div>
+    </div>
   </div>
 </template>
+
+<script>
+import TopNav from "@/views/TopNav.vue";
+export default {
+  components: { TopNav },
+};
+</script>
 
 <style lang="scss">
 #app {
@@ -15,18 +26,30 @@
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
+  background-color: #f7f7f7;
+}
+.content {
+  margin-top: 66px;
+}
+#footerCon {
+  background-color: #2b2b2b;
+  text-align: center;
+  width: 100%;
+  margin-top: 50px;
 }
 
-#nav {
-  padding: 30px;
+.cpy-right {
+  color: #f5f5f5;
+  font-size: 0.875em;
+  letter-spacing: 1px;
+  display: block;
+  line-height: 1.8em;
+  width: 80%;
+  margin: 0 auto;
+}
 
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
-    }
-  }
+.cpy-right p {
+  padding: 20px 0;
+  margin-bottom: 0;
 }
 </style>
