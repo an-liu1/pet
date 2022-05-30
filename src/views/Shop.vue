@@ -27,10 +27,9 @@
           class="col-md-6 col-lg-4"
           v-for="(i, index) in productList"
           :key="index"
-          v-show="i.display"
         >
-          <el-image :src="i.productImg"></el-image>
-          <p>{{ i.name + " - " + i.size }}</p>
+          <el-image :src="require('@/assets/image/' + i.productImg)"></el-image>
+          <p>{{ i.displayName + " - " + i.size }}</p>
           <p>{{ i.category }}</p>
         </div>
       </div>
@@ -71,9 +70,13 @@ export default {
       return this.$store.state.productList;
     },
   },
+  mounted() {
+    this.$store.dispatch("searchProductList", { page: 0, size: 10 });
+  },
   methods: {
     filterChange: function () {
-      this.$store.commit("setProductList", this.checkList);
+      console.log(this.checkList);
+      // this.$store.commit("setProductList", this.checkList);
     },
   },
 };
