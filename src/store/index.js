@@ -7,7 +7,7 @@ export default new Vuex.Store({
   state: {
     productList: [
       {
-        productImg: "https://picsum.photos/300/?image=1",
+        productImg: require("@/assets/banner1.png"),
         name: "Beef",
         size: "170g / 6oz",
         category: "CANS",

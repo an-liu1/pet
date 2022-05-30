@@ -1,6 +1,6 @@
 <template>
   <div class="shop">
-    <el-image src="https://picsum.photos/1920/?image=15" fit="cover"></el-image>
+    <el-image :src="bannerImgPath"></el-image>
 
     <div class="contentContainer row">
       <div class="sideNav col-md-2">
@@ -42,6 +42,7 @@
 export default {
   data() {
     return {
+      bannerImgPath: require("@/assets/banner1.png"),
       checkList: [],
     };
   },
