@@ -32,6 +32,16 @@
           <p>{{ i.displayName + " - " + i.size }}</p>
           <p>{{ i.category }}</p>
         </div>
+        <el-pagination
+          class="mt-5"
+          @current-change="handleCurrentChange"
+          background
+          :current-page.sync="currentPage"
+          :page-size="12"
+          layout="prev, pager, next,total"
+          :total="total"
+        >
+        </el-pagination>
       </div>
     </div>
   </div>
@@ -42,6 +52,7 @@ export default {
   data() {
     return {
       bannerImgPath: require("@/assets/banner1.png"),
+      currentPage: 0,
       checkList: [],
     };
   },
@@ -67,16 +78,25 @@ export default {
       ];
     },
     productList: function () {
-      return this.$store.state.productList;
+      return this.$store.state.productList.product;
+    },
+    total: function () {
+      return this.$store.state.productList.total;
     },
   },
   mounted() {
-    this.$store.dispatch("searchProductList", { page: 0, size: 10 });
+    this.$store.dispatch("searchProductList", { page: 0, size: 12 });
   },
   methods: {
-    filterChange: function () {
+    filterChange() {
       console.log(this.checkList);
       // this.$store.commit("setProductList", this.checkList);
+    },
+    handleCurrentChange(currentPage) {
+      this.$store.dispatch("searchProductList", {
+        page: currentPage - 1,
+        size: 12,
+      });
     },
   },
 };
