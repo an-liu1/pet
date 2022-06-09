@@ -7,7 +7,7 @@
       <div class="col-lg-6 serviceContent">
         <h3>{{ i.title }}</h3>
         <p>{{ i.content }}</p>
-        <el-button type="success">{{ i.buttonText }}</el-button>
+        <el-button >{{ i.buttonText }}</el-button>
       </div>
       <div class="col-lg-6" v-if="i.imgPosition == 'right'">
         <el-image :src="i.img" fit="cover"></el-image>
@@ -40,13 +40,14 @@ export default {
       font-size: 38px;
       line-height: 48px;
       font-weight: 700;
+      color: #4b423a;
     }
     p {
       margin: 30px 0;
       padding: 0;
       font-size: 18px;
       line-height: 28px;
-      color: rgba(22, 28, 45, 0.7);
+      color: #4b423a;
       opacity: 0.8;
       font-family: "Hind Siliguri", sans-serif;
     }
@@ -54,6 +55,8 @@ export default {
       width: 200px;
       height: 60px;
       font-size: 18px;
+      background-color: #f2d3b2;
+      color: #fff
     }
   }
 }

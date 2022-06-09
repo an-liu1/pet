@@ -58,7 +58,7 @@
 
     <iframe
       src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2879.4174228516235!2d-79.35681328425599!3d43.80570035057355!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89d4d3a4112f5e49%3A0x37dfc57417e4d11e!2sHello%20TEC!5e0!3m2!1sen!2sca!4v1648613423895!5m2!1sen!2sca"
-      width="100%"
+      width="80%"
       height="450"
       style="border: 0"
       allowfullscreen=""
@@ -95,12 +95,12 @@ export default {};
           text-transform: capitalize;
           line-height: 42px;
           letter-spacing: 0.5px;
-          color: #30b300;
+          color: #f2d3b2;
           padding-left: 0.83em;
           &::before {
             content: "";
             display: block;
-            background: #daffcc;
+            background: #fcf0e5;
             width: 2.5em;
             height: 2.5em;
             position: absolute;
@@ -112,12 +112,12 @@ export default {};
       }
       h3 {
         font-size: 38px;
-        color: #252422;
+        color: #4b423a;
         font-weight: bold;
       }
       p {
         font-size: 18px;
-        color: #161c2db3;
+        color: #4b423a;
       }
     }
     .contactBottom {
@@ -142,18 +142,18 @@ export default {};
           color: #fff;
           display: inline-block;
           border: none;
-          background: #30b300;
+          background: #F2D3B2;
         }
         h4 {
           font-size: 20px;
-          color: #252422;
+          color: #4b423a;
           margin: 25px 0;
           font-weight: 600;
         }
         a {
           display: block;
           text-decoration: none;
-          color: rgba(22, 28, 45, 0.7);
+          color: #4b423a;
           &:hover {
             color: #252422;
           }

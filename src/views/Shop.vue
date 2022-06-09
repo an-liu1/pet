@@ -1,7 +1,6 @@
 <template>
   <div class="shop">
     <el-image :src="bannerImgPath"></el-image>
-
     <div class="contentContainer row">
       <div class="sideNav col-md-2">
         <h3>Filter By</h3>
@@ -115,6 +114,7 @@ export default {
     text-align: left;
     h3 {
       text-align: left;
+      color: #4b423a;
     }
     .filterContainer {
       padding: 10px 0;
@@ -122,9 +122,11 @@ export default {
       .filterTitle {
         font-weight: bold;
         margin: 15px 0;
+        color: #4b423a;
       }
       .filterSelection {
         margin: 10px 0;
+        color: #4b423a;
       }
     }
   }
