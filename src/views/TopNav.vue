@@ -1,23 +1,17 @@
 <template>
   <div>
-    <b-navbar toggleable="lg" type="dark" variant="dark" fixed="top">
-      <b-navbar-brand @click="$router.push('/')">
+    <el-menu :default-active="'1'" mode="horizontal" class="mainNav">
+      <el-menu-item @click="$router.push('/')" style="margin: 0 30% 0 5%">
         <img alt="logo" src="../assets/logo.png" width="40"
-      /></b-navbar-brand>
-
-      <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
-
-      <b-collapse id="nav-collapse" is-nav>
-        <b-navbar-nav>
-          <b-nav-item
-            v-for="(i, index) in navList"
-            :key="index"
-            @click="$router.push(i.link)"
-            >{{ i.title }}</b-nav-item
-          >
-        </b-navbar-nav>
-      </b-collapse>
-    </b-navbar>
+      /></el-menu-item>
+      <el-menu-item
+        v-for="(i, index) in navList"
+        :key="index"
+        :index="index + 1"
+        @click="$router.push(i.link)"
+        >{{ i.title }}</el-menu-item
+      >
+    </el-menu>
   </div>
 </template>
 
@@ -27,7 +21,8 @@ export default {
     navList: function () {
       return [
         { title: "HOME", link: "/" },
-        { title: "SHOP", link: "/shop" },
+        { title: "CAT", link: "/cat" },
+        { title: "DOG", link: "/dog" },
         { title: "SERVICE", link: "/service" },
         { title: "CONTACT", link: "/contact" },
       ];
@@ -37,25 +32,10 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-/deep/ .navbar-dark .navbar-brand {
-  margin-left: 30px;
-  @media screen and (max-width: 390px) {
-    margin-left: 10px;
-  }
-}
-#nav-collapse {
-  @media screen and (min-width: 1200px) {
-    margin-left: 30%;
-    .nav-item {
-      width: 120px;
-      font-weight: bold;
-      a {
-        color: #ffffff;
-        &:hover {
-          color: rgb(247, 202, 209);
-        }
-      }
-    }
-  }
+.mainNav {
+  width: 100%;
+  z-index: 999;
+  position: fixed;
+  top: 0;
 }
 </style>

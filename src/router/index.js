@@ -11,9 +11,14 @@ const routes = [
     component: Home,
   },
   {
-    path: "/shop",
-    name: "Shop",
-    component: () => import("../views/Shop.vue"),
+    path: "/cat",
+    name: "Cat",
+    component: () => import("../views/ShopCAT.vue"),
+  },
+  {
+    path: "/dog",
+    name: "Dog",
+    component: () => import("../views/ShopDog.vue"),
   },
   {
     path: "/service",

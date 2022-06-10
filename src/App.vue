@@ -29,7 +29,7 @@ export default {
   background-color: #f7f7f7;
 }
 .content {
-  margin-top: 66px;
+  margin-top: 60px;
 }
 #footerCon {
   background-color: #2b2b2b;

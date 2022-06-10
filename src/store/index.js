@@ -17,7 +17,7 @@ export default new Vuex.Store({
     async searchProductList({ commit }, data) {
       let res = await request(
         "post",
-        `pet/searchProductList/${data.page}/${data.size}`,
+        `pet/searchProductList/${data.page}/${data.pageSize}`,
         data
       );
       commit("setProductList", res.data);
