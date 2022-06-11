@@ -1,7 +1,6 @@
 <template>
   <div>
     <el-image src="https://picsum.photos/1920/?image=16" fit="cover"></el-image>
-
     <serviceCom :serviceList="serviceList" />
   </div>
 </template>
@@ -14,28 +13,25 @@ export default {
     serviceList: function () {
       return [
         {
-          img: "https://picsum.photos/1920/?image=20",
+          img: require('@/assets/service1.jpg'),
           imgPosition: "left",
-          title: "We are all about pets",
+          title: "BATH & BRUSH-OUT",
           content:
-            "Pellentesque convallis diam consequat magna vulputate malesuada. Cras a ornare elit. Nulla viverra pharetra sem, eget pulvinar neque pharetra ac.Lorem ipsum dolor sit amet, Ea consequuntur illum facere aperiam sequi optio consectetur.",
-          buttonText: "Read More",
+          "NAIL TRIMMING / GRINDING <br /> EAR CLEANING / PLUCKING <br />  CUSTOMIZED BATH <br />  THOROUGH BLOW-DRY & BRUSH-OUT <br />  OPTIONAL BOWS / BANDANNA / COLOGNE​​​",
         },
         {
-          img: "https://picsum.photos/1920/?image=21",
+          img: require('@/assets/serviceCat.jpeg'),
           imgPosition: "right",
-          title: "Established & Trusted Pet Care Service",
+          title: "TOUCH-UP",
           content:
-            "Pellentesque convallis diam consequat magna vulputate malesuada. Cras a ornare elit. Nulla viverra pharetra sem, eget pulvinar neque pharetra ac.Lorem ipsum dolor sit amet, Ea consequuntur illum facere aperiam sequi optio consectetur.",
-          buttonText: "Read More",
+            "NAIL TRIMMING / GRINDING  <br /> EAR CLEANING/ PLUCKING  <br /> CUSTOMIZED BATH  <br /> THOROUGH BLOW-DRY & BRUSH-OUT  <br /> LIGHT BODY TRIM  <br /> OPTIONAL BOWS / BANDANNA/ COLOGNE",
         },
         {
-          img: "https://picsum.photos/1920/?image=22",
+          img: require('@/assets/serviceDog.jpeg'),
           imgPosition: "left",
-          title: "Team Experts",
+          title: "FULL GROOM",
           content:
-            "Pellentesque convallis diam consequat magna vulputate malesuada. Cras a ornare elit. Nulla viverra pharetra sem, eget pulvinar neque pharetra ac.Lorem ipsum dolor sit amet, Ea consequuntur illum facere aperiam sequi optio consectetur.",
-          buttonText: "Read More",
+            "NAIL TRIMMING / GRINDING  <br /> EAR CLEANING/ PLUCKING  <br /> CUSTOMIZED BATH  <br /> THOROUGH BLOW-DRY & BRUSH-OUT  <br /> FULL HAIRCUT  <br /> OPTIONAL BOWS / BANDANNA/ COLOGNE​",
         },
       ];
     },

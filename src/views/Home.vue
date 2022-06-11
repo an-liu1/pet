@@ -3,7 +3,7 @@
     <div class="carouselContainer">
       <el-carousel trigger="click" height="880px">
         <el-carousel-item v-for="(i, index) in slideList" :key="index">
-          <el-image :src="i.imgPath" fit="fill"></el-image>
+          <el-image :src="i.imgPath" fit="fit"></el-image>
         </el-carousel-item>
       </el-carousel>
     </div>
@@ -39,17 +39,17 @@ export default {
     slideList: function () {
       return [
         {
-          imgPath: "https://picsum.photos/1920/?image=55",
+          imgPath: require('@/assets/homeSlider1.png'),
           title: "First",
           text: "Nulla vitae elit libero, a pharetra augue mollis interdum.",
         },
         {
-          imgPath: "https://picsum.photos/1920/?image=54",
+          imgPath: require('@/assets/homeSlider2.jpeg'),
           title: "Second",
           text: "Nulla vitae elit libero, a pharetra augue mollis interdum.",
         },
         {
-          imgPath: "https://picsum.photos/1920/?image=58",
+          imgPath: require('@/assets/homeSlider3.jpeg'),
           title: "Third",
           text: "Nulla vitae elit libero, a pharetra augue mollis interdum.",
         },
@@ -58,7 +58,7 @@ export default {
     serviceList: function () {
       return [
         {
-          img: "https://picsum.photos/1920/?image=30",
+          img: require('@/assets/homeService1.png'),
           imgPosition: "left",
           title: "We are all about pets",
           content:
@@ -66,7 +66,7 @@ export default {
           buttonText: "Read More",
         },
         {
-          img: "https://picsum.photos/1920/?image=31",
+          img: require('@/assets/homeService2.png'),
           imgPosition: "right",
           title: "Established & Trusted Pet Care Service",
           content:
@@ -109,9 +109,9 @@ export default {
 .testimonial {
   width: 100%;
   height: 600px;
-  background-image: url("https://picsum.photos/1920/?image=52");
+  background-color: #fae9d8;
   .el-carousel {
-    width: 70%;
+    width: 80%;
     margin: 0 auto;
     padding-top: 100px;
     .testimonialSlide {
@@ -121,20 +121,21 @@ export default {
       }
       h3 {
         line-height: 1.5;
+        padding-left: 100px;
         padding-right: 100px;
         margin-top: 20px;
         margin-bottom: 30px;
         font-size: 26px;
-        color: #023c5a;
+        color: #4b423a;
         font-weight: bold;
       }
       .name {
-        color: #0094df;
+        color: #4b423a;
         font-size: 22px;
         font-weight: 700;
       }
       .petName {
-        color: #57667e;
+        color: #716455;
         font-weight: 500;
         line-height: 1.5;
       }

@@ -25,14 +25,14 @@ export default {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
+  color: #716455;
   background-color: #f7f7f7;
 }
 .content {
   margin-top: 60px;
 }
 #footerCon {
-  background-color: #2b2b2b;
+  background-color: #c5ac92;
   text-align: center;
   width: 100%;
   margin-top: 50px;

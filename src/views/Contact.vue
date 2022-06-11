@@ -20,50 +20,39 @@
       </div>
 
       <div class="row contactBottom">
-        <div class="col-md-6 col-lg-3">
-          <div class="contact-info">
-            <span class="fa fa-home" aria-hidden="true"></span>
-            <h4>Contact Address</h4>
-            <p>60 Harnworth Dr, North York, ON M2H 3C2</p>
-          </div>
-        </div>
-        <div class="col-md-6 col-lg-3">
+        <div class="col-md-6 col-lg-6">
           <div class="contact-info">
             <span class="fa fa-envelope" aria-hidden="true"></span>
-            <h4>Email address</h4>
+            <h4>Contact Us</h4>
+            <p>1 Spadina Rd, Richmond Hill, ON L4B 3M2</p>
+             <p><a href="tel:+1 289 809 8558">+1 (289) 809-8558</a></p>
             <p>
-              <a href="mailto:contact@mail.com" class="email"
-                >contact@mail.com</a
+              <a href="mailto:multipaw2021@gmail.com" class="email"
+                >multipaw2021@gmail.com</a
               >
             </p>
+            <el-divider><i class="el-icon-mobile-phone"></i></el-divider>
           </div>
         </div>
-        <div class="col-md-6 col-lg-3">
-          <div class="contact-info">
-            <span class="fa fa-phone" aria-hidden="true"></span>
-            <h4>Contact phone</h4>
-            <p><a href="tel:+12 534 891 4364">+12 534 891 4364</a></p>
-          </div>
-        </div>
-        <div class="col-md-6 col-lg-3">
+        <div class="col-md-6 col-lg-6">
           <div class="contact-info">
             <span class="fa fa-clock" aria-hidden="true"></span>
             <h4>Opening hours</h4>
-            <p>Mon-Fri: 8 AM - 5 PM</p>
-            <p>Sat-Sun: Closed</p>
+            <p>Mon: 10:30 am – 8 pm</p>
+            <p>Tue: Closed</p>
+            <p>Wed - Sun: 10:30 am – 8 pm</p>
+            <el-divider><i class="el-icon-time"></i></el-divider>
           </div>
         </div>
       </div>
     </div>
-
-    <iframe
-      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2879.4174228516235!2d-79.35681328425599!3d43.80570035057355!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89d4d3a4112f5e49%3A0x37dfc57417e4d11e!2sHello%20TEC!5e0!3m2!1sen!2sca!4v1648613423895!5m2!1sen!2sca"
-      width="80%"
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2876.73767446826!2d-79.39776678499042!3d43.86126557911469!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882b2b153247c3c9%3A0x41d39bce2546ee23!2sMultipaw%20Pet%20Lifestyle!5e0!3m2!1sen!2sca!4v1654891003382!5m2!1sen!2sca" 
+      width="85%"
       height="450"
-      style="border: 0"
-      allowfullscreen=""
-      loading="lazy"
-      referrerpolicy="no-referrer-when-downgrade"
+      style="margin-bottom: 50px"
+      allowfullscreen="" 
+      loading="lazy" 
+      referrerpolicy="no-referrer-when-downgrade">
     ></iframe>
   </div>
 </template>
@@ -125,12 +114,12 @@ export default {};
       color: #161c2db3;
       font-size: 18px;
       .contact-info {
-        height: 300px;
+        height: 330px;
         padding: 2.5em 1em;
         background: #fff;
         border-radius: 6px;
         border: 1px solid #eee;
-        margin-bottom: 15px;
+        margin-bottom: 0px;
         span.fa {
           font-size: 20px;
           width: 45px;
@@ -157,6 +146,10 @@ export default {};
           &:hover {
             color: #252422;
           }
+        }
+        p {
+        font-size: 16px;
+        color: #4b423a;
         }
       }
     }
