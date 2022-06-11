@@ -7,10 +7,14 @@ Vue.use(Vuex);
 export default new Vuex.Store({
   state: {
     productList: [],
+    productDetail: {},
   },
   mutations: {
-    setProductList: function (state, payload) {
+    setProductList(state, payload) {
       state.productList = payload;
+    },
+    getProductDetail(state, payload) {
+      state.productDetail = payload;
     },
   },
   actions: {
@@ -21,6 +25,19 @@ export default new Vuex.Store({
         data
       );
       commit("setProductList", res.data);
+    },
+    async getProductDetail({ commit }, data) {
+      let res = await request("get", `pet/getProductDetail/${data}`);
+      commit("getProductDetail", res.data);
+    },
+    async deleteProduct(context, data) {
+      await request("delete", `pet/deleteProduct/${data}`);
+    },
+    async updateProduct(context, data) {
+      await request("put", `pet/updateProduct/${data._id}`, data);
+    },
+    async createProduct(context, data) {
+      await request("post", "pet/createProduct", data);
     },
   },
   modules: {},

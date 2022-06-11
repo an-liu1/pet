@@ -46,9 +46,10 @@
       </div>
       <div class="shopList col-md-10 row m-0">
         <div
-          class="col-md-6 col-lg-4"
+          class="col-md-6 col-lg-4 product"
           v-for="(i, index) in productList"
           :key="index"
+          @click="jumpToDetail(i._id)"
         >
           <el-image :src="require('@/assets/image/' + i.productImg)"></el-image>
           <p>{{ i.displayName + " - " + i.size }}</p>
@@ -142,6 +143,9 @@ export default {
         pageSize: 12,
       });
     },
+    jumpToDetail(id) {
+      this.$router.push(`/productDetail/${id}`);
+    },
   },
 };
 </script>
@@ -173,12 +177,21 @@ export default {
     }
   }
   .shopList {
+    .product {
+      &:hover {
+        cursor: pointer;
+      }
+    }
     .el-image {
       height: 350px;
     }
     p {
       line-height: 25px;
       margin: 5px;
+      &:hover {
+        cursor: pointer;
+        color: #f2d3b2;
+      }
     }
   }
 }

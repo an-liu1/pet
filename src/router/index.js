@@ -21,6 +21,11 @@ const routes = [
     component: () => import("../views/ShopDog.vue"),
   },
   {
+    path: "/productDetail/:id",
+    name: "Product Detail",
+    component: () => import("../views/Detail.vue"),
+  },
+  {
     path: "/service",
     name: "Service",
     component: () => import("../views/Service.vue"),
@@ -29,6 +34,11 @@ const routes = [
     path: "/contact",
     name: "Contact",
     component: () => import("../views/Contact.vue"),
+  },
+  {
+    path: "/admin",
+    name: "Admin",
+    component: () => import("../views/Admin.vue"),
   },
 ];
 
