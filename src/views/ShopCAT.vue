@@ -53,7 +53,7 @@
         >
           <el-image :src="require('@/assets/image/' + i.productImg)"></el-image>
           <p>{{ i.displayName + " - " + i.size }}</p>
-          <p>{{ i.category }}</p>
+          <!-- <p>{{ i.category }}</p> -->
         </div>
         <el-pagination
           class="mt-5"

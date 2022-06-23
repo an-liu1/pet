@@ -6,7 +6,7 @@
     </div>
     <div id="footerCon">
       <div class="cpy-right">
-        <p>© 2022 gf hfhgf hhfg. All rights reserved | fbgdf hfghfgjn gfncv.</p>
+        <p>Copyright ©2022 Multipaw Pet Lifestyle Inc. All rights reserved.</p>
       </div>
     </div>
   </div>
