@@ -120,6 +120,7 @@ export default {
         page: 0,
         pageSize: 12,
         keyword: this.keyword,
+        pet: "Cat",
       });
     },
     filterChange() {
@@ -129,18 +130,24 @@ export default {
         pageSize: 12,
         category: this.category,
         size: this.size,
+        pet: "Cat",
       });
     },
     clearFilter() {
       this.keyword = "";
       this.category = "";
       this.size = "";
-      this.$store.dispatch("searchProductList", { page: 0, pageSize: 12 });
+      this.$store.dispatch("searchProductList", {
+        page: 0,
+        pageSize: 12,
+        pet: "Cat",
+      });
     },
     handleCurrentChange(currentPage) {
       this.$store.dispatch("searchProductList", {
         page: currentPage - 1,
         pageSize: 12,
+        pet: "Cat",
       });
     },
     jumpToDetail(id) {
