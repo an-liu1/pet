@@ -26,7 +26,10 @@
       </el-table-column>
       <el-table-column prop="package" label="包装" width="120">
       </el-table-column>
-      <el-table-column prop="price" label="价钱" width="120"> </el-table-column>
+      <el-table-column prop="price" label="折扣价" width="120">
+      </el-table-column>
+      <el-table-column prop="originPrice" label="原价" width="120">
+      </el-table-column>
       <el-table-column prop="productImg" label="图片" width="300">
       </el-table-column>
       <el-table-column prop="size" label="大小" width="120"> </el-table-column>
@@ -99,8 +102,10 @@ export default {
         package: "",
         pet: "",
         price: "",
+        originPrice: "",
         productImg: "",
         size: "",
+        description: "",
       },
       addDialogVisible: false,
       newProductInfo: {
@@ -112,8 +117,10 @@ export default {
         package: "",
         pet: "",
         price: "",
+        originPrice: "",
         productImg: "",
         size: "",
+        description: "",
       },
     };
   },
@@ -155,11 +162,19 @@ export default {
         },
         {
           name: "price",
-          title: "价钱",
+          title: "折扣价",
+        },
+        {
+          name: "originPrice",
+          title: "原价",
         },
         {
           name: "productImg",
           title: "图片",
+        },
+        {
+          name: "description",
+          title: "描述",
         },
         {
           name: "size",

@@ -49,11 +49,20 @@
           class="col-md-6 col-lg-4 product"
           v-for="(i, index) in productList"
           :key="index"
-          @click="jumpToDetail(i._id)"
         >
-          <el-image :src="require('@/assets/image/' + i.productImg)"></el-image>
-          <p>{{ i.displayName + " - " + i.size }}</p>
-          <!-- <p>{{ i.category }}</p> -->
+          <div class="single-product">
+            <el-image
+              :src="require('@/assets/image/' + i.productImg)"
+              @click="openImg(i.productImg)"
+            ></el-image>
+            <div class="product-btm" @click="jumpToDetail(i._id)">
+              <h4>{{ i.displayName + " - " + i.category }}</h4>
+              <div class="mt-3">
+                <h5>${{ i.price }}</h5>
+                <del v-if="i.originPrice">${{ i.originPrice }}</del>
+              </div>
+            </div>
+          </div>
         </div>
         <el-pagination
           class="mt-5"
@@ -67,6 +76,17 @@
         </el-pagination>
       </div>
     </div>
+    <el-dialog title="" :visible.sync="dialogVisible" width="30%">
+      <el-image
+        v-if="productImg"
+        :src="require('@/assets/image/' + productImg)"
+      ></el-image>
+      <span slot="footer" class="dialog-footer">
+        <el-button type="primary" @click="dialogVisible = false"
+          >确 定</el-button
+        >
+      </span>
+    </el-dialog>
   </div>
 </template>
 
@@ -79,6 +99,8 @@ export default {
       keyword: "",
       category: "",
       size: "",
+      dialogVisible: false,
+      productImg: "",
     };
   },
   computed: {
@@ -153,6 +175,10 @@ export default {
     jumpToDetail(id) {
       this.$router.push(`/productDetail/${id}`);
     },
+    openImg(i) {
+      this.productImg = i;
+      this.dialogVisible = true;
+    },
   },
 };
 </script>
@@ -188,16 +214,38 @@ export default {
       &:hover {
         cursor: pointer;
       }
-    }
-    .el-image {
-      height: 350px;
-    }
-    p {
-      line-height: 25px;
-      margin: 5px;
-      &:hover {
-        cursor: pointer;
-        color: #f2d3b2;
+      .single-product {
+        text-align: center;
+        margin-bottom: 50px;
+        background-color: #ffffff;
+        .el-image {
+          width: 280px;
+          height: 280px;
+          padding: 22px 25px 18px;
+        }
+        .product-btm {
+          height: 130px;
+          padding: 22px 25px 18px;
+          border: 1px solid #f0f2f1;
+          text-align: left;
+          h4 {
+            color: #4a4a4a;
+            font-size: 16px;
+            font-weight: 400;
+            text-transform: uppercase;
+            margin-bottom: 0px;
+            &:hover {
+              color: #716455;
+            }
+          }
+          h5 {
+            margin-bottom: 0px;
+            margin-right: 10%;
+            font-size: 18px;
+            color: red;
+            display: inline-block;
+          }
+        }
       }
     }
   }

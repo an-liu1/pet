@@ -69,6 +69,7 @@ export default {
   position: fixed;
   top: 0;
   height: 60px;
+  background: #fff;
 }
 .el-menu-item {
   font-size: 15px;
@@ -90,7 +91,7 @@ export default {
 
 #toggle .span {
   border-radius: 10px;
-  background: #0e5fc2;
+  background: #716455;
   transition: all 0.3s ease-out;
   backface-visibility: hidden;
 }
