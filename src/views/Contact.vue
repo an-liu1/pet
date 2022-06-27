@@ -1,7 +1,6 @@
 <template>
   <div class="contact">
-    <el-image src="https://picsum.photos/1920/?image=17" fit="cover"></el-image>
-
+    <el-image :src="require('@/assets/banner1.png')" ></el-image>
     <div class="contentContainer">
       <div class="row contactTop">
         <div class="col-lg-6 mb-lg-0 mb-lg-5">
@@ -66,7 +65,7 @@ export default {};
   margin-bottom: -50px;
   .el-image {
     width: 100%;
-    height: 480px;
+    padding: 0;
   }
   .contentContainer {
     width: 80%;

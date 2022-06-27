@@ -1,7 +1,5 @@
 <template>
   <div class="shop">
-    <el-image :src="bannerImgPath"></el-image>
-
     <div class="contentContainer row">
       <div class="sideNav col-md-2">
         <h3>Filter By</h3>
@@ -184,14 +182,11 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.el-image {
-  width: 100%;
-  height: 480px;
-}
 .contentContainer {
   width: 80%;
   margin: 0 auto;
-  margin-top: 50px;
+  margin-top: 30px;
+  padding-top: 30px;
   .sideNav {
     text-align: left;
     h3 {
