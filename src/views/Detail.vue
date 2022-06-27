@@ -7,9 +7,7 @@
 
     <div class="row col-11 mx-auto container">
       <div class="col-6">
-        <el-image
-          :src="require('@/assets/image/' + productDetail.productImg)"
-        ></el-image>
+        <el-image :src="imgPath(productDetail.productImg)"></el-image>
       </div>
       <div class="col-5 offset-lg-1">
         <div class="s_product_text">
@@ -46,6 +44,15 @@ export default {
     this.$store
       .dispatch("getProductDetail", this.$route.params.id)
       .then(() => {});
+  },
+  methods: {
+    imgPath(e) {
+      try {
+        return require("@/assets/image/" + e);
+      } catch (error) {
+        return require("@/assets/image/default-img.png");
+      }
+    },
   },
 };
 </script>

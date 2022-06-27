@@ -52,7 +52,7 @@
         >
           <div class="single-product">
             <el-image
-              :src="require('@/assets/image/' + i.productImg)"
+              :src="imgPath(i.productImg)"
               @click="openImg(i.productImg)"
             ></el-image>
             <div class="product-btm" @click="jumpToDetail(i._id)">
@@ -137,6 +137,13 @@ export default {
     this.clearFilter();
   },
   methods: {
+    imgPath(e) {
+      try {
+        return require("@/assets/image/" + e);
+      } catch (error) {
+        return require("@/assets/image/default-img.png");
+      }
+    },
     searchByKeyword() {
       this.$store.dispatch("searchProductList", {
         page: 0,

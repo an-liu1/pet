@@ -21,7 +21,7 @@
           v-for="(i, index) in navList"
           :key="index"
           :index="i.link"
-          @click="$router.push(i.link)"
+          @click="jump(i.link)"
           >{{ i.title }}</el-menu-item
         >
       </el-menu>
@@ -56,6 +56,10 @@ export default {
   },
   methods: {
     select: function () {
+      this.isActive = !this.isActive;
+    },
+    jump(i) {
+      this.$router.push(i);
       this.isActive = !this.isActive;
     },
   },
