@@ -39,7 +39,6 @@
 export default {
   data() {
     return {
-      activeIndex: "/",
       isActive: false,
     };
   },
@@ -53,6 +52,12 @@ export default {
         { title: "CONTACT", link: "/contact" },
       ];
     },
+    activeIndex: function () {
+      return this.$store.state.activeIndex;
+    },
+  },
+  mounted() {
+    console.log(this.activeIndex);
   },
   methods: {
     select: function () {
@@ -60,7 +65,11 @@ export default {
     },
     jump(i) {
       this.$router.push(i);
-      this.isActive = !this.isActive;
+      this.$store.commit("setActiveNav", i);
+      console.log(this.activeIndex);
+      if (this.isActive) {
+        this.isActive = !this.isActive;
+      }
     },
   },
 };
