@@ -120,13 +120,13 @@ export default {
         height: 88px;
       }
       h3 {
-        font-family: 'KG Corner of the Sky';
+        font-family: 'Cheeky Rabbit';
         line-height: 1.5;
         padding-left: 100px;
         padding-right: 100px;
         margin-top: 20px;
-        margin-bottom: 30px;
-        font-size: 26px;
+        margin-bottom: px;
+        font-size: 24px;
         color: #4b423a;
         font-weight: bold;
       }
