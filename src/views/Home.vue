@@ -125,7 +125,7 @@ export default {
         padding-left: 100px;
         padding-right: 100px;
         margin-top: 20px;
-        margin-bottom: px;
+        margin-bottom: 30px;
         font-size: 24px;
         color: #4b423a;
         font-weight: bold;
