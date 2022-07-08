@@ -116,10 +116,11 @@ export default {
     padding-top: 100px;
     .testimonialSlide {
       .el-avatar {
-        width: 132px;
-        height: 132px;
+        width: 88px;
+        height: 88px;
       }
       h3 {
+        font-family: 'KG Corner of the Sky';
         line-height: 1.5;
         padding-left: 100px;
         padding-right: 100px;
@@ -130,11 +131,13 @@ export default {
         font-weight: bold;
       }
       .name {
+        font-family:'a Abstract Groovy';
         color: #4b423a;
         font-size: 22px;
         font-weight: 700;
       }
       .petName {
+        font-family:'Cheeky Rabbit';
         color: #716455;
         font-weight: 500;
         line-height: 1.5;

@@ -1,0 +1,36 @@
+
+@font-face {
+    font-family: 'a Abstract Groovy';
+    src: url('aAbstractGroovy.eot');
+    src: url('aAbstractGroovy.eot?#iefix') format('embedded-opentype'),
+        url('aAbstractGroovy.woff2') format('woff2'),
+        url('aAbstractGroovy.woff') format('woff'),
+        url('aAbstractGroovy.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Cheeky Rabbit';
+    src: url('CheekyRabbit.eot');
+    src: url('CheekyRabbit.eot?#iefix') format('embedded-opentype'),
+        url('CheekyRabbit.woff2') format('woff2'),
+        url('CheekyRabbit.woff') format('woff'),
+        url('CheekyRabbit.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'KG Corner of the Sky';
+    src: url('KGCorneroftheSky.eot');
+    src: url('KGCorneroftheSky.eot?#iefix') format('embedded-opentype'),
+        url('KGCorneroftheSky.woff2') format('woff2'),
+        url('KGCorneroftheSky.woff') format('woff'),
+        url('KGCorneroftheSky.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}

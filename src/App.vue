@@ -20,8 +20,9 @@ export default {
 </script>
 
 <style lang="scss">
+@import './assets/font/index.css';
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+  font-family: 'KG Corner of the Sky', 'Cheeky Rabbit', 'a Abstract Groovy' ;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;

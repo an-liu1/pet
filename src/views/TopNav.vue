@@ -76,6 +76,7 @@ export default {
   background: #fff;
 }
 .el-menu-item {
+  font-family:'a Abstract Groovy';
   font-size: 15px;
 }
 

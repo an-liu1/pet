@@ -56,7 +56,7 @@
             <div class="product-btm" @click="jumpToDetail(i._id)">
               <h4>{{ i.displayName + " - " + i.category }}</h4>
               <div class="mt-3">
-                <h5>${{ i.price }}</h5>
+                <h5 :style="!i.originPrice ? 'color:#716455;' : 'color:red;'">${{ i.price }}</h5>
                 <del v-if="i.originPrice">${{ i.originPrice }}</del>
               </div>
             </div>
@@ -196,6 +196,7 @@ export default {
   .sideNav {
     text-align: left;
     h3 {
+      font-family:'a Abstract Groovy';
       text-align: left;
     }
     .filterContainer {
@@ -230,9 +231,9 @@ export default {
           border: 1px solid #f0f2f1;
           text-align: left;
           h4 {
+            font-family:'KG Corner of the Sky';
             color: #4a4a4a;
             font-size: 16px;
-            font-weight: 400;
             text-transform: uppercase;
             margin-bottom: 0px;
             &:hover {
@@ -240,11 +241,13 @@ export default {
             }
           }
           h5 {
+            font-family:'Cheeky Rabbit';
             margin-bottom: 0px;
             margin-right: 10%;
             font-size: 18px;
             color: red;
             display: inline-block;
+            font-weight: bold;
           }
         }
       }

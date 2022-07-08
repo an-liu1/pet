@@ -26,7 +26,7 @@
             <p>1 Spadina Rd, Richmond Hill, ON L4B 3M2</p>
              <p><a href="tel:+1 289 809 8558">+1 (289) 809-8558</a></p>
             <p>
-              <a href="mailto:multipaw2021@gmail.com" class="email"
+              <a href="mailto:multipaw2021@#$gmail.com" class="email"
                 >multipaw2021@gmail.com</a
               >
             </p>
@@ -37,9 +37,9 @@
           <div class="contact-info">
             <span class="fa fa-clock" aria-hidden="true"></span>
             <h4>Opening hours</h4>
-            <p>Mon: 10:30 am – 8 pm</p>
+            <p>Mon: 10:30 am - 8 pm</p>
             <p>Tue: Closed</p>
-            <p>Wed - Sun: 10:30 am – 8 pm</p>
+            <p>Wed - Sun: 10:30 am - 8 pm</p>
             <el-divider><i class="el-icon-time"></i></el-divider>
           </div>
         </div>
@@ -74,6 +74,7 @@ export default {};
     .contactTop {
       text-align: left;
       h6 {
+        font-family: 'a Abstract Groovy';
         display: inline-block;
         position: relative;
         z-index: 2;
@@ -99,11 +100,14 @@ export default {};
         }
       }
       h3 {
+        font-family: 'a Abstract Groovy';
         font-size: 38px;
         color: #4b423a;
         font-weight: bold;
       }
       p {
+        font-family: 'Cheeky Rabbit';
+        font-weight: bold;
         font-size: 18px;
         color: #4b423a;
       }
@@ -133,12 +137,14 @@ export default {};
           background: #F2D3B2;
         }
         h4 {
+          font-family: 'a Abstract Groovy';
           font-size: 20px;
           color: #4b423a;
           margin: 25px 0;
           font-weight: 600;
         }
         a {
+          font-family: 'KG Corner of the Sky';
           display: block;
           text-decoration: none;
           color: #4b423a;
@@ -147,6 +153,7 @@ export default {};
           }
         }
         p {
+        font-family: 'KG Corner of the Sky';
         font-size: 16px;
         color: #4b423a;
         }

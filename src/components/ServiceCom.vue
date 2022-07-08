@@ -49,7 +49,8 @@ export default {
     padding: 50px;
     text-align: center;
     h3 {
-      font-size: 28px;
+      font-family:'a Abstract Groovy';
+      font-size: 30px;
       line-height: 48px;
       font-weight: 700;
       color: #4b423a;
@@ -61,7 +62,7 @@ export default {
       line-height: 28px;
       color: #4b423a;
       opacity: 0.8;
-      font-family: "Hind Siliguri", sans-serif;
+      font-family: 'KG Corner of the Sky';
     }
   }
 }
