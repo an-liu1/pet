@@ -6,10 +6,14 @@ Vue.use(Vuex);
 
 export default new Vuex.Store({
   state: {
+    activeIndex: "/",
     productList: [],
     productDetail: {},
   },
   mutations: {
+    setActiveNav(state, payload) {
+      state.activeIndex = payload;
+    },
     setProductList(state, payload) {
       state.productList = payload;
     },
