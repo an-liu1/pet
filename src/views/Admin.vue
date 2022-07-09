@@ -17,7 +17,10 @@
       </el-table-column>
       <el-table-column fixed prop="pet" label="宠物类别" width="120">
       </el-table-column>
-      <el-table-column prop="name" label="名字" width="300"> </el-table-column>
+      <el-table-column prop="displayName" label="网站显示名字" width="300">
+      </el-table-column>
+      <el-table-column prop="name" label="后台查询名字" width="300">
+      </el-table-column>
       <el-table-column prop="brand" label="品牌名" width="120">
       </el-table-column>
       <el-table-column prop="category" label="类别" width="120">
@@ -141,8 +144,12 @@ export default {
           title: "宠物类别",
         },
         {
+          name: "displayName",
+          title: "网站显示名字",
+        },
+        {
           name: "name",
-          title: "名字",
+          title: "后台查询名字",
         },
         {
           name: "brand",
