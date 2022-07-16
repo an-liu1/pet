@@ -12,8 +12,27 @@
       <div class="col-5 offset-lg-1">
         <div class="s_product_text">
           <h3>{{ productDetail.displayName }}</h3>
-          <h2>${{ productDetail.price }}</h2>
-          <ul class="list">
+          <div
+            v-if="
+              productDetail.productSizeAndPrice &&
+              productDetail.productSizeAndPrice.length > 0
+            "
+          >
+            <h2>${{ productDetail.productSizeAndPrice[showIndex].price }}</h2>
+            <div class="row">
+              <div
+                v-for="(i, index) in productDetail.productSizeAndPrice"
+                :key="index"
+                class="col-auto"
+              >
+                <b-button variant="outline-warning" @click="showPrice(index)">{{
+                  i.size
+                }}</b-button>
+              </div>
+            </div>
+          </div>
+          <h2 v-else>${{ productDetail.price }}</h2>
+          <ul class="list mt-4">
             <li><span>Category :</span> {{ productDetail.category }}</li>
             <li><span>Brand :</span> {{ productDetail.brand }}</li>
             <li><span>Pet :</span> {{ productDetail.pet }}</li>
@@ -35,6 +54,11 @@
 
 <script>
 export default {
+  data() {
+    return {
+      showIndex: 0,
+    };
+  },
   computed: {
     productDetail: function () {
       return this.$store.state.productDetail;
@@ -52,6 +76,9 @@ export default {
       } catch (error) {
         return require("@/assets/image/default-img.png");
       }
+    },
+    showPrice(index) {
+      this.showIndex = index;
     },
   },
 };

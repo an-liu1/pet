@@ -59,13 +59,38 @@
     </el-pagination>
 
     <el-dialog title="修改记录" :visible.sync="editDialogVisible" width="50%">
-      <div v-for="(i, index) in productListInfo" :key="index">
+      <div v-for="(i, index) in productListInfo" :key="index + 100">
         {{ i.title }}
         <el-input
           v-model="updateProductInfo[i.name]"
           placeholder="请输入内容"
         ></el-input>
       </div>
+      <h5 class="mt-3 mb-3">详情界面显示价格及尺寸</h5>
+      <div
+        v-for="(i, index) in updateProductInfo.productSizeAndPrice"
+        :key="index"
+        class="row"
+      >
+        <div class="col-5">
+          尺寸
+          <el-input
+            v-model="updateProductInfo.productSizeAndPrice[index].size"
+            placeholder="请输入内容"
+          ></el-input>
+        </div>
+        <div class="col-5">
+          价格
+          <el-input
+            v-model="updateProductInfo.productSizeAndPrice[index].price"
+            placeholder="请输入内容"
+          ></el-input>
+        </div>
+        <el-button @click="deleteRow(index)" class="col-2">删 除</el-button>
+        <hr class="mt-3 mb-3" />
+      </div>
+      <el-button @click="addRow">添 加</el-button>
+      <hr class="mt-3 mb-3" />
       <span slot="footer" class="dialog-footer">
         <el-button @click="editDialogVisible = false">取 消</el-button>
         <el-button type="primary" @click="updateProduct">更 新</el-button>
@@ -80,6 +105,31 @@
           placeholder="请输入内容"
         ></el-input>
       </div>
+      <h5 class="mt-3 mb-3">详情界面显示价格及尺寸</h5>
+      <div
+        v-for="(i, index) in newProductInfo.productSizeAndPrice"
+        :key="index"
+        class="row"
+      >
+        <div class="col-5">
+          尺寸
+          <el-input
+            v-model="newProductInfo.productSizeAndPrice[index].size"
+            placeholder="请输入内容"
+          ></el-input>
+        </div>
+        <div class="col-5">
+          价格
+          <el-input
+            v-model="newProductInfo.productSizeAndPrice[index].price"
+            placeholder="请输入内容"
+          ></el-input>
+        </div>
+        <el-button @click="deleteNewRow(index)" class="col-2">删 除</el-button>
+        <hr class="mt-3 mb-3" />
+      </div>
+      <el-button @click="addNewRow">添 加</el-button>
+      <hr class="mt-3 mb-3" />
       <span slot="footer" class="dialog-footer">
         <el-button @click="addDialogVisible = false">取 消</el-button>
         <el-button type="primary" @click="addProduct">添 加</el-button>
@@ -109,6 +159,7 @@ export default {
         productImg: "",
         size: "",
         description: "",
+        productSizeAndPrice: [{ price: "", size: "" }],
       },
       addDialogVisible: false,
       newProductInfo: {
@@ -124,6 +175,7 @@ export default {
         productImg: "",
         size: "",
         description: "",
+        productSizeAndPrice: [{ price: "", size: "" }],
       },
     };
   },
@@ -267,6 +319,18 @@ export default {
           });
         });
       });
+    },
+    addRow() {
+      this.updateProductInfo.productSizeAndPrice.push({ price: "", size: "" });
+    },
+    deleteRow(i) {
+      this.updateProductInfo.productSizeAndPrice.splice(i, 1);
+    },
+    addNewRow() {
+      this.newProductInfo.productSizeAndPrice.push({ price: "", size: "" });
+    },
+    deleteNewRow(i) {
+      this.newProductInfo.productSizeAndPrice.splice(i, 1);
     },
   },
 };
